@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE_AFL.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+*
+* @category    AbleCanyon
+* @package     AbleCanyon_OrderComment
+* @copyright   Copyright (c) 2014-2015 AbleCanyon
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*
+*/
+-->
+<config>
+    <modules>
+        <AbleCanyon_OrderComment>
+            <active>true</active>
+            <codePool>local</codePool>
+        </AbleCanyon_OrderComment>
+    </modules>
+</config>

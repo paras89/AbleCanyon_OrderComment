@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE_AFL.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+*
+* @category    AbleCanyon
+* @package     AbleCanyon_OrderComment
+* @copyright   Copyright (c) 2014-2015 AbleCanyon
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*
+*/
+-->
+<config>
+    <modules>
+        <AbleCanyon_OrderComment>
+            <version>0.0.1</version>
+        </AbleCanyon_OrderComment>
+    </modules>
+    <global>
+        <models>
+            <ordercomment>
+                <class>AbleCanyon_OrderComment_Model</class>
+            </ordercomment>
+        </models>
+        <helpers>
+            <ordercomment>
+                <class>AbleCanyon_OrderComment_Helper</class>
+            </ordercomment>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <checkout_type_onepage_save_order>
+                <observers>
+                    <saveCustomerComment>
+                        <class>AbleCanyon_OrderComment_Model_Observer</class>
+                        <method>saveOrderComment</method>
+                    </saveCustomerComment>
+                </observers>
+            </checkout_type_onepage_save_order>
+            <checkout_type_multishipping_create_orders_single>
+                <observers>
+                    <saveCustomerComment>
+                        <class>AbleCanyon_OrderComment_Model_Observer</class>
+                        <method>saveOrderComment</method>
+                    </saveCustomerComment>
+                </observers>
+            </checkout_type_multishipping_create_orders_single>
+        </events>
+    </frontend>
+</config>
